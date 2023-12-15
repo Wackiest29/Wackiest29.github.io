@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CLARO DOMINICANA  - AJAX</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 20px;
+      background-color: #f8f8f8;
+    }
+
+    header {
+      background-color: #990000;
+      padding: 10px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #fff;
+    }
+
+    section {
+      background-color: #ffe6e6;
+      padding: 20px;
+      border: 1px solid #cc0000;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+
+    h2 {
+      color: #990000;
+    }
+
+    footer {
+      margin-top: 20px;
+      text-align: center;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>CLARO DOMINICANA </h1>
+  </header>
+
+  <section>
+    <h2>Contenido Dinámico con AJAX:</h2>
+    <div id="contenidoAjax"></div>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 CLARO DOMINICANA </p>
+  </footer>
+
+  <script>
+    var xhttpAjax = new XMLHttpRequest();
+    xhttpAjax.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("contenidoAjax").innerText = this.responseText;
+      }
+    };
+    xhttpAjax.open("GET", "ajax-content.txt", true);
+    xhttpAjax.send();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+[
+    {
+      "label": "Inicio",
+      "url": "index.html"
+    },
+    {
+      "label": "Productos",
+      "url": "productos.html"
+    },
+    {
+      "label": "Zapatos",
+      "url": "zapatos.html"
+    },
+    {
+      "label": "Ropa",
+      "url": "ropa.html"
+    },
+    {
+      "label": "Acerca de Nosotros",
+      "url": "acerca.html"
+    },
+    {
+      "label": "Contacto",
+      "url": "contacto.html"
+    }
+  ]
+  

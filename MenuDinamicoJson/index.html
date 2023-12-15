@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Menu dinamico</title>
+</head>
+<body>
+  <nav>
+    <div id="menu-container">
+      <ul id="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li class="has-submenu">
+          <a href="productos.html">Productos</a>
+          <ul class="submenu">
+            <li><a href="zapatos.html">Zapatos</a></li>
+            <li><a href="ropa.html">Ropa</a></li>
+          </ul>
+        </li>
+        <li><a href="acerca.html">Acerca de Nosotros</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+      <div id="logo-container">
+        <a id="logo-link" href="index.html">
+          <img src="nike.png" alt="Logo" id="logo">
+        </a>
+      </div>
+    </div>
+  </nav>
+  <video autoplay muted loop id="video-bg">
+    <source src="videonike.mp4" type="video/mp4">
+    Tu navegador no soporta la etiqueta de video.
+  </video>
+  <script src="menu.js"></script>
+</body>
+</html>
+

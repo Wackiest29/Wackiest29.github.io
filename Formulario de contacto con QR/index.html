@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>Formulario de Contacto</h1>
+    <form id="contactForm">
+        <div class="input-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+        </div>
+        <div class="input-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="input-group">
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required>
+        </div>
+        <div class="input-group">
+            <label for="alias">Alias:</label>
+            <input type="text" id="alias" name="alias" required>
+        </div>
+        <button type="button" id="generar-qr">Generar Código QR</button>
+    </form>
+    <div id="qr-container"></div>
+
+    <script src="https://cdn.jsdelivr.net/gh/neocotic/qrious/dist/qrious.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/qrcode.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<persona>
+  <nombre>Antonio</nombre>
+  <edad>52</edad>
+  <ciudad>Santo Domingo</ciudad>
+  <intereses>
+    <interes>Plan de internet movil 500 GB</interes>
+    <interes>Iphone 15 Pro Max 1TB</interes>
+    <interes>Plan de internet Hogar 300MB</interes>
+  </intereses>
+</persona>

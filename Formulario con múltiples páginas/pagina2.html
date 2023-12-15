@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="form-page">
+        <h1>Familiares del paciente</h1>
+        <form id="familiaresForm">
+            <label for="nombreFamiliar">Nombre:</label>
+            <input type="text" id="nombreFamiliar" name="nombreFamiliar"><br><br>
+            <label for="parentesco">Parentesco:</label>
+            <input type="text" id="parentesco" name="parentesco"><br><br>
+            <label for="edadFamiliar">Edad:</label>
+            <input type="text" id="edadFamiliar" name="edadFamiliar"><br><br>
+        </form>
+        <button onclick="addFamiliar()">Agregar Familiar</button>
+        <button onclick="nextPage()">Siguiente</button>
+    </div>
+    <div id="menu">
+        <ul>
+            <li><a href="pagina1.html">Datos Personales</a></li>
+            <li><a href="pagina2.html">Familiares</a></li>
+            <li><a href="pagina3.html">Condiciones Pre-Existentes de Salud</a></li>
+            <li><a href="pagina4.html">Internamientos Realizados</a></li>
+            <li><a href="pagina5.html">Presentación de Datos Registrados</a></li>
+        </ul>
+    </div>
+
+    <script>
+        // Función para agregar un familiar a la lista
+        function addFamiliar() {
+            var nombreFamiliar = document.getElementById("nombreFamiliar").value;
+            var parentesco = document.getElementById("parentesco").value;
+            var edadFamiliar = document.getElementById("edadFamiliar").value;
+
+            var familiares = localStorage.getItem("familiares");
+
+            if (familiares) {
+                familiares = JSON.parse(familiares);
+            } else {
+                familiares = [];
+            }
+
+            var nuevoFamiliar = {
+                nombre: nombreFamiliar,
+                parentesco: parentesco,
+                edad: edadFamiliar
+            };
+
+            familiares.push(nuevoFamiliar);
+            localStorage.setItem("familiares", JSON.stringify(familiares));
+
+            // Limpiar el formulario después de agregar un familiar
+            document.getElementById("nombreFamiliar").value = "";
+            document.getElementById("parentesco").value = "";
+            document.getElementById("edadFamiliar").value = "";
+        }
+
+        // Función para redirigir a la siguiente página
+        function nextPage() {
+            window.location.href = 'pagina3.html';
+        }
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>

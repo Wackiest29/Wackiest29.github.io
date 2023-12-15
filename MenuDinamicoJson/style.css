@@ -1,0 +1,127 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 86px;
+  padding: 0;
+  background: black;
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+}
+
+#video-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+#menu-container {
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  bottom: 0; /* Coloca el menú en la parte inferior */
+  left: 0;
+  width: 100%; /* El menú ocupa todo el ancho de la pantalla */
+  text-align: center; /* Centra el contenido del menú horizontalmente */
+  padding: 10px 0; /* Añade espaciado al menú */
+  z-index: 1;
+}
+
+nav {
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-bottom: 2px solid #ffffff;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* Organiza los elementos del menú horizontalmente */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  align-items: center;
+}
+
+#menu-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+  border-bottom: 2px solid #ffffff;
+  background-color: black;
+}
+
+li {
+  display: inline-block;
+  position: relative;
+  margin-right: 30px;
+  transition: background-color 0.2s;
+}
+
+.has-submenu {
+  position: relative;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  background-color: #000;
+  border: 1px solid #777;
+  top: 100%;
+  left: 0;
+  width: 200px;
+  opacity: 0;
+  transition: opacity 0.2s, transform 0.2s;
+  transform: translateY(-10px);
+}
+
+.submenu a {
+  display: block;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.has-submenu:hover .submenu {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#logo-container{
+display: flex;
+align-items: center;
+margin-left: 10px; /* Ajusta el margen izquierdo para acercar el logotipo a "Inicio" */
+}
+
+#logo {
+max-width: 60px;
+height: auto;
+margin-right: 10px;
+}
+
+#logo-link {
+text-decoration: none;
+color: #fff;
+}
+
+#menu a {
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  padding: 10px 20px;
+  transition: color 0.2s;
+}
+
+#menu a:hover {
+  color: #fffffe;
+  border-bottom: 2px solid #b9b5b5;
+}

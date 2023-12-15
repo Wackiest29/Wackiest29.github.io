@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="form-page">
+        <h1>Condiciones Pre-Existentes de Salud</h1>
+        <form id="condicionesSaludForm">
+            <label for="enfermedad">Enfermedad:</label>
+            <input type="text" id="enfermedad" name="enfermedad"><br><br>
+            <label for="tiempoEnfermedad">Tiempo con la Enfermedad:</label>
+            <input type="text" id="tiempoEnfermedad" name="tiempoEnfermedad"><br><br>
+        </form>
+        <button onclick="addCondicionSalud()">Agregar Condición de Salud</button>
+        <button onclick="nextPage()">Siguiente</button>
+    </div>
+    <div id="menu">
+        <ul>
+            <li><a href="pagina1.html">Datos Personales</a></li>
+            <li><a href="pagina2.html">Familiares</a></li>
+            <li><a href="pagina3.html">Condiciones Pre-Existentes de Salud</a></li>
+            <li><a href="pagina4.html">Internamientos Realizados</a></li>
+            <li><a href="pagina5.html">Presentación de Datos Registrados</a></li>
+        </ul>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

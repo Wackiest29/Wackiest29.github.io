@@ -1,0 +1,27 @@
+{
+    "producto": "iPhone 15 Pro Max",
+    "caracteristicas": {
+      "pantalla": "6.7 pulgadas Super Retina XDR",
+      "procesador": "A16 Bionic",
+      "almacenamiento": "1TB",
+      "ram": "16 GB",
+      "camara": "Triple cámara de 12 MP con tecnología LiDAR"
+    },
+    "precio": 1.499,
+    "disponibilidad": true,
+    "opiniones": [
+      {
+        "usuario": "TechInfluencer",
+        "comentario": "El rendimiento del iPhone 15 Pro Max es simplemente asombroso. ¡Una experiencia inigualable!"
+      },
+      {
+        "usuario": "MobilePhotographer",
+        "comentario": "La calidad de la cámara y la tecnología LiDAR son ideales para la fotografía creativa."
+      },
+      {
+        "usuario": "PowerUser",
+        "comentario": "1TB de almacenamiento es perfecto para mis necesidades. Velocidad y capacidad en un solo dispositivo."
+      }
+    ]
+  }
+  

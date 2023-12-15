@@ -1,0 +1,38 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Hace que el cuerpo ocupe el 100% del alto de la ventana */
+  margin: 0; /* Elimina el margen predeterminado del cuerpo */
+  font-family: 'Arial', sans-serif; /* Cambia la fuente a Arial o tu fuente preferida */
+  background-color: #f0f0f0; /* Un color de fondo ligeramente más suave */
+}
+
+h1 {
+  color: #333; /* Cambia el color del texto del título */
+}
+
+h3 {
+  color: #555; /* Cambia el color del texto de los subtítulos */
+}
+
+/* Estilo para los formularios */
+form {
+  margin-top: 10px; /* Añade espacio superior a los formularios */
+}
+
+/* Estilo para los botones de actualización */
+button {
+  background-color: #4CAF50; /* Color de fondo verde */
+  color: white; /* Texto en color blanco */
+  padding: 10px 20px; /* Relleno interno del botón */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  transition: background-color 0.3s; /* Agrega una transición de color de fondo */
+}
+
+button:hover {
+  background-color: #45a049; /* Cambia el color de fondo al pasar el mouse */
+}

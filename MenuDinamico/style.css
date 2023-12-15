@@ -1,0 +1,105 @@
+/* Resetear los estilos por defecto del navegador */
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para el fondo y tipografía global */
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo para el encabezado y menú */
+nav {
+    background-color: #0077ff; /* Azul */
+    text-align: center;
+}
+
+ul.menu-horizontal {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul.menu-horizontal > li {
+    display: inline-block;
+    position: relative;
+}
+
+ul.menu-horizontal > li > a {
+    display: block;
+    color: #fff; /* Blanco */
+    text-decoration: none;
+    padding: 15px 20px;
+}
+
+/* Estilo para los submenús desplegables */
+ul.menu-vertical {
+    display: none;
+    position: absolute;
+    background-color: #007bff; /* Azul */
+    border: 1px solid #fff;
+    border-top: none; 
+}
+
+ul.menu-vertical > li {
+    clear: both;
+}
+
+ul.menu-vertical > li > a {
+    display: block;
+    color: #fff; /* Blanco */
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+/* Mostrar submenús cuando se pasa el ratón por encima */
+ul.menu-horizontal > li:hover > ul.menu-vertical {
+    display: block;
+}
+
+/* Añadir un efecto de transición suave */
+ul.menu-horizontal > li > ul.menu-vertical {
+    transition: display 0.2s ease-in;
+}
+
+/* Estilo para los enlaces en hover */
+ul.menu-horizontal > li > a:hover,
+ul.menu-vertical > li > a:hover {
+    background-color: #0056b3; /* Azul más oscuro en hover */
+}
+
+/* Ocultar los puntos (marcadores) de los submenús */
+ul.menu-vertical {
+    list-style: none;
+    padding-left: 0;
+    transition: display 0.2s ease-in;
+}
+
+/* Eliminar la línea subrayada de los enlaces en los submenús */
+ul.menu-vertical > li > a {
+    text-decoration: none; /* Elimina la línea subrayada */
+    color: #fff; /* Blanco */
+    padding: 10px 20px;
+    line-height: 30px; /* Aumentar el espaciado vertical */
+}
+
+/* Aumentar el espaciado horizontal entre elementos del menú principal */
+ul.menu-horizontal > li {
+    margin-right: 20px; /* Espaciado horizontal entre elementos del menú */
+}
+
+nav img {
+    width: 100px; /* Ancho deseado */
+    height: auto; /* Altura ajustada automáticamente */
+    margin: 10px; /* Espaciado alrededor de la imagen */
+}
+
+body {
+    background-image: url('banco.jpg');
+    background-size: cover; /* Ajusta la imagen al tamaño de la ventana */
+    background-repeat: no-repeat; /* Evita la repetición de la imagen */
+}
+

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+</head>
+<body>
+    <div class="form-page">
+        <h1>Datos Personales</h1>
+        <form id="datosPersonalesForm">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre"><br><br>
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido"><br><br>
+            <label for="edad">Edad:</label>
+            <input type="text" id="edad" name="edad"><br><br>
+            <label for="cedula">Cedula:</label>
+            <input type="text" id="cedula" name="cedula"><br><br>
+            <label for="telefono">Telefono:</label>
+            <input type="text" id="telefono" name="telefono"><br><br>
+            <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+            <input type="date" id="fechaNacimiento" name="fechaNacimiento">
+            <br><br>
+            <label for="genero">Género:</label>
+            <select id="genero" name="genero">
+                <option value="femenino">Femenino</option>
+                <option value="masculino">Masculino</option>
+            </select><br><br>
+        </form>
+        <button onclick="saveDatosPersonales()">Guardar y Continuar</button>
+    </div>
+
+    <div id="menu">
+        <ul>
+            <li><a href="pagina1.html">Datos Personales</a></li>
+            <li><a href="pagina2.html">Familiares</a></li>
+            <li><a href="pagina3.html">Condiciones Pre-Existentes de Salud</a></li>
+            <li><a href="pagina4.html">Internamientos Realizados</a></li>
+            <li><a href="pagina5.html">Presentación de Datos Registrados</a></li>
+        </ul>
+    </div>
+
+    <script>
+        // Obtén los datos del formulario y guárdalos en localStorage
+        function saveDatosPersonales() {
+            var nombre = document.getElementById("nombre").value;
+            var apellido = document.getElementById("apellido").value;
+            var edad = document.getElementById("edad").value;
+            var cedula = document.getElementById("cedula").value;
+            var genero = document.getElementById("genero").value;
+            var fechaNacimiento = document.getElementById("fechaNacimiento").value;
+        
+            // Crea un objeto para almacenar los datos
+            var datosPersonales = {
+                nombre: nombre,
+                apellido: apellido,
+                edad: edad,
+                cedula: cedula,
+                genero: genero,
+                fechaNacimiento: fechaNacimiento
+            };
+        
+            // Convierte el objeto a una cadena JSON y guárdalo en localStorage
+            localStorage.setItem("datosPersonales", JSON.stringify(datosPersonales));
+
+            // Redirige a la siguiente página (pagina2.html en este caso)
+        window.location.href = 'pagina2.html';
+        }
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>

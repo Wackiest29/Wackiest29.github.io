@@ -1,0 +1,46 @@
+{
+    "DatosPersonales": {
+      "Nombre": "",
+      "Apellido": "",
+      "Edad": 0,
+      "Género": ""
+    },
+    "Familiares": [
+      {
+        "Nombre": "",
+        "Parentesco": "",
+        "Edad": 0
+      },
+      {
+        "Nombre": "",
+        "Parentesco": "",
+        "Edad": 0
+      }
+      
+    ],
+    "CondicionesPreExistentes": [
+      {
+        "Enfermedad": "",
+        "Tiempo": ""
+      },
+      {
+        "Enfermedad": "",
+        "Tiempo": ""
+      }
+     
+    ],
+    "InternamientosRealizados": [
+      {
+        "Fecha": "",
+        "Centro Médico": "",
+        "Diagnóstico": ""
+      },
+      {
+        "Fecha": "",
+        "Centro Médico": "",
+        "Diagnóstico": ""
+      }
+      
+    ]
+  }
+  

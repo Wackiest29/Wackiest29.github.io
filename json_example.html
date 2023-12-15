@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Información de Producto - JSON</title>
+  <style>
+    body {
+      font-family: 'Lato', sans-serif;
+      margin: 20px;
+      background-color: #f0f0f0;
+    }
+
+    header {
+      background-color: #333;
+      padding: 10px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #fff;
+    }
+
+    section {
+      background-color: #fff;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    footer {
+      margin-top: 20px;
+      text-align: center;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Portal de Productos Tecnológicos</h1>
+  </header>
+
+  <section>
+    <h2>Detalles del Producto desde JSON:</h2>
+    <div id="datosJson"></div>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 Portal de Productos Tecnológicos</p>
+  </footer>
+
+<script>
+    var xhttpJson = new XMLHttpRequest();
+    xhttpJson.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        try {
+          var jsonData = JSON.parse(this.responseText);
+          var producto = jsonData.producto;
+          var caracteristicas = jsonData.caracteristicas;
+          var precio = jsonData.precio;
+          var disponibilidad = jsonData.disponibilidad;
+          var opiniones = jsonData.opiniones;
+  
+          document.getElementById("datosJson").innerHTML = `
+            <p><strong>Producto:</strong> ${producto}</p>
+            <p><strong>Características:</strong></p>
+            <ul>
+              <li>Pantalla: ${caracteristicas.pantalla}</li>
+              <li>Procesador: ${caracteristicas.procesador}</li>
+              <li>Almacenamiento: ${caracteristicas.almacenamiento}</li>
+              <li>RAM: ${caracteristicas.ram}</li>
+              <li>Cámara: ${caracteristicas.camara}</li>
+            </ul>
+            <p><strong>Precio:</strong> $${precio}</p>
+            <p><strong>Disponibilidad:</strong> ${disponibilidad ? 'Disponible' : 'No disponible'}</p>
+            <p><strong>Opiniones:</strong></p>
+            <ul>
+              ${opiniones.map(opinion => `<li><strong>${opinion.usuario}:</strong> ${opinion.comentario}</li>`).join('')}
+            </ul>
+          `;
+        } catch (error) {
+          console.error("Error al analizar el JSON:", error);
+        }
+      }
+    };
+    xhttpJson.open("GET", "datos.json", true);
+    xhttpJson.send();
+  </script>
+  
+
+</body>
+</html>

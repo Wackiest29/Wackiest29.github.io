@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MVC - Lista de Tareas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+       
+        h1 {
+            color: rgb(0, 189, 252);
+        }
+
+        .completed {
+            text-decoration: line-through;
+            color: rgb(108, 107, 107);
+        }
+    </style>
+</head>
+<body>
+
+<center><h1>Modelo Vista Controlador (MVC) - Lista de Tareas</h1></center>
+
+<p>
+    Este ejemplo implementa una lista de tareas utilizando el patrón MVC en JavaScript. Puedes agregar nuevas tareas, marcarlas como completadas y ver la lista de tareas.
+</p>
+
+<h1>Lista de Tareas</h1>
+
+<input type="text" id="inputTarea" placeholder="Nueva tarea">
+<button onclick="Controlador.agregarTarea()">Agregar Tarea</button>
+
+<h2>Lista de Tareas</h2>
+<ul id="listaTareas"></ul>
+
+<script>
+    // Modelo
+    const Modelo = {
+        tareas: [],
+
+        agregarTarea: function(tarea) {
+            this.tareas.push({ texto: tarea, completada: false });
+        },
+
+        marcarComoCompletada: function(indice) {
+            this.tareas[indice].completada = true;
+        },
+
+        obtenerTareas: function() {
+            return this.tareas;
+        }
+    };
+
+    // Vista
+    const Vista = {
+        listaTareas: document.getElementById('listaTareas'),
+
+        renderizar: function(tareas) {
+            this.listaTareas.innerHTML = '';
+
+            tareas.forEach((tarea, indice) => {
+                const elementoTarea = document.createElement('li');
+                elementoTarea.textContent = tarea.texto;
+                if (tarea.completada) {
+                    elementoTarea.classList.add('completed');
+                }
+
+                elementoTarea.addEventListener('click', () => Controlador.marcarComoCompletada(indice));
+                this.listaTareas.appendChild(elementoTarea);
+            });
+        }
+    };
+
+    // Controlador
+    const Controlador = {
+        agregarTarea: function() {
+            const nuevaTarea = document.getElementById('inputTarea').value;
+            if (nuevaTarea.trim() !== '') {
+                Modelo.agregarTarea(nuevaTarea);
+                Vista.renderizar(Modelo.obtenerTareas());
+                document.getElementById('inputTarea').value = '';
+            }
+        },
+
+        marcarComoCompletada: function(indice) {
+            Modelo.marcarComoCompletada(indice);
+            Vista.renderizar(Modelo.obtenerTareas());
+        }
+    };
+
+    // Inicialización
+    Modelo.agregarTarea('Aprender MVC');
+    Modelo.agregarTarea('Construir una aplicación');
+    Vista.renderizar(Modelo.obtenerTareas());
+</script>
+
+</body>
+</html>

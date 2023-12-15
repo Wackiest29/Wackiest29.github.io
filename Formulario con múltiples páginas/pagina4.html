@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="form-page">
+        <h1>Internamientos Realizados</h1>
+        <form id="internamientosForm">
+            <label for="fechaInternamiento">Fecha:</label>
+            <input type="date" id="fechaInternamiento" name="fechaInternamiento"><br><br>
+            <label for="centroMedico">Centro Médico:</label>
+            <input type="text" id="centroMedico" name="centroMedico"><br><br>
+            <label for="diagnostico">Diagnóstico:</label>
+            <input type="text" id="diagnostico" name="diagnostico"><br><br>
+        </form>
+        <button onclick="addInternamiento()">Agregar Internamiento</button>
+        <button onclick="nextPage()">Siguiente</button>
+    </div>
+    <div id="menu">
+        <ul>
+            <li><a href="pagina1.html">Datos Personales</a></li>
+            <li><a href="pagina2.html">Familiares</a></li>
+            <li><a href="pagina3.html">Condiciones Pre-Existentes de Salud</a></li>
+            <li><a href="pagina4.html">Internamientos Realizados</a></li>
+            <li><a href="pagina5.html">Presentación de Datos Registrados</a></li>
+        </ul>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

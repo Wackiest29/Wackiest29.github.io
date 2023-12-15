@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/estilo.css" />
+  <link rel="stylesheet" href="./css/chartist.min.css" />
+  <title>Graficos Chart</title>
+</head>
+<body>
+  <h1>Resumen Estadístico de la UASD, 2023 1er y 2do Trimestre, 2023</h1>
+  <br />
+  
+  <!-- Población Estudiantil -->
+  <h3>Población Estudiantil</h3>
+  <div id="student" style="width: 80%"></div>
+  <form id="formStudent">
+    <label for="Datos1Student">Dato 1:</label>
+    <input type="number" id="Datos1Student" />
+    <label for="Datos2Student">Dato 2:</label>
+    <input type="number" id="Datos2Student" />
+    <button type="button" onclick="enviarDatos('student', 'Datos1Student', 'Datos2Student')">Enviar</button>
+  </form>
+
+  <!-- Profesores -->
+  <h3>Profesores</h3>
+  <div id="teacher" style="width: 80%"></div>
+  <form id="formTeacher">
+    <label for="Datos1Teacher">Dato 1:</label>
+    <input type="number" id="Datos1Teacher" />
+    <label for="Datos2Teacher">Dato 2:</label>
+    <input type="number" id="Datos2Teacher" />
+    <button type="button" onclick="enviarDatos('teacher', 'Datos1Teacher', 'Datos2Teacher')">Enviar</button>
+  </form>
+
+  <!-- Egresados -->
+  <h3>Egresados (Enero-Junio)</h3>
+  <div id="egresados" style="width: 80%"></div>
+  <form id="formEgresados">
+    <label for="Datos1Egresados">Dato 1:</label>
+    <input type="number" id="Datos1Egresados" />
+    <label for="Datos2Egresados">Dato 2:</label>
+    <input type="number" id="Datos2Egresados" />
+    <button type="button" onclick="enviarDatos('egresados', 'Datos1Egresados', 'Datos2Egresados')">Enviar</button>
+  </form>
+
+  <!-- Investigación -->
+  <h3>Investigación</h3>
+  <div id="research" style="width: 80%"></div>
+  <form id="formResearch">
+    <label for="Datos1Research">Dato 1:</label>
+    <input type="number" id="Datos1Research" />
+    <label for="Datos2Research">Dato 2:</label>
+    <input type="number" id="Datos2Research" />
+    <button type="button" onclick="enviarDatos('research', 'Datos1Research', 'Datos2Research')">Enviar</button>
+  </form>
+
+  <script src="./js/funcions.js"></script>
+  <script src="./js/chartist.min.js"></script>
+</body>
+</html>
+
